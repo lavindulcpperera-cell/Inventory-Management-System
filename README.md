@@ -68,8 +68,6 @@ python setup_database.py
 | id | INT (PK) | Category ID |
 | name | VARCHAR(100) | Category name |
 | description | TEXT | Category description |
-| created_at | TIMESTAMP | Creation date |
-| updated_at | TIMESTAMP | Last update |
 
 ### Products Table
 | Column | Type | Description |
@@ -79,11 +77,7 @@ python setup_database.py
 | sku | VARCHAR(100) | Stock Keeping Unit (unique) |
 | description | TEXT | Product description |
 | category_id | INT (FK) | Reference to category |
-| quantity | INT | Current stock quantity |
-| price | DECIMAL(10,2) | Product price |
-| min_stock_level | INT | Minimum stock threshold |
-| created_at | TIMESTAMP | Creation date |
-| updated_at | TIMESTAMP | Last update |
+|
 
 ### Transactions Table
 | Column | Type | Description |
@@ -91,12 +85,6 @@ python setup_database.py
 | id | INT (PK) | Transaction ID |
 | product_id | INT (FK) | Reference to product |
 | transaction_type | ENUM | 'IN' or 'OUT' |
-| quantity | INT | Quantity moved |
-| notes | TEXT | Transaction notes |
-| user | VARCHAR(100) | User who made the transaction |
-| created_at | TIMESTAMP | Transaction date |
-
-## Usage Guide
 
 ### Adding a Product
 1. Click "Products" in the sidebar or menu
