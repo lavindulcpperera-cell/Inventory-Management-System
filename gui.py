@@ -1,6 +1,7 @@
 """
 GUI Module
 Tkinter interface for the Inventory Management System
+I used ai to modify the interface more 
 """
 
 import tkinter as tk
