@@ -45,17 +45,7 @@ cd inventory-management-system
 ``
 ### 2. Install Dependencies
 
-pip install -r requirements.txt
-```
-
-Or install manually:
-```bash
-pip install mysql-connector-python
-```
-
 ### 3. Setup the Database
-
-Run the database setup script:
 
 ```bash
 python setup_database.py
