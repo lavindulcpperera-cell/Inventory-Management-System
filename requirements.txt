@@ -1,0 +1,11 @@
+# Inventory Management System - Requirements
+# Python 3.7+
+
+# Database
+mysql-connector-python>=8.0.0
+
+# GUI (built-in with Python)
+# tkinter - included with Python standard library
+
+# Optional: For packaging as executable
+# pyinstaller>=5.0
