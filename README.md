@@ -60,6 +60,61 @@ Run the database setup script:
 ```bash
 python setup_database.py
 ```
+## Database Schema
+
+### Categories Table
+| Column | Type | Description |
+|--------|------|-------------|
+| id | INT (PK) | Category ID |
+| name | VARCHAR(100) | Category name |
+| description | TEXT | Category description |
+| created_at | TIMESTAMP | Creation date |
+| updated_at | TIMESTAMP | Last update |
+
+### Products Table
+| Column | Type | Description |
+|--------|------|-------------|
+| id | INT (PK) | Product ID |
+| name | VARCHAR(200) | Product name |
+| sku | VARCHAR(100) | Stock Keeping Unit (unique) |
+| description | TEXT | Product description |
+| category_id | INT (FK) | Reference to category |
+| quantity | INT | Current stock quantity |
+| price | DECIMAL(10,2) | Product price |
+| min_stock_level | INT | Minimum stock threshold |
+| created_at | TIMESTAMP | Creation date |
+| updated_at | TIMESTAMP | Last update |
+
+### Transactions Table
+| Column | Type | Description |
+|--------|------|-------------|
+| id | INT (PK) | Transaction ID |
+| product_id | INT (FK) | Reference to product |
+| transaction_type | ENUM | 'IN' or 'OUT' |
+| quantity | INT | Quantity moved |
+| notes | TEXT | Transaction notes |
+| user | VARCHAR(100) | User who made the transaction |
+| created_at | TIMESTAMP | Transaction date |
+
+## Usage Guide
+
+### Adding a Product
+1. Click "Products" in the sidebar or menu
+2. Click "+ Add Product" button
+3. Fill in product details (Name, SKU, Quantity, Price)
+4. Select a category (optional)
+5. Click "Save Product"
+
+### Managing Stock
+1. Select a product from the list
+2. Click "Stock In/Out" button
+3. Choose movement type (In/Out)
+4. Enter quantity and notes
+5. Click "Save"
+
+### Low Stock Alerts
+- Navigate to "Low Stock" to see products below minimum threshold
+- Products are automatically flagged when stock is low
 
 
   
