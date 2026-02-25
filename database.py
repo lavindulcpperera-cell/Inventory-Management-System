@@ -1,7 +1,7 @@
-"""
+
 Database Module
 Handles all MySQL database operations for the Inventory Management System
-"""
+
 
 import mysql.connector
 from mysql.connector import Error
@@ -159,7 +159,7 @@ class Database:
             print(f"Error fetching low stock products: {e}")
             return []
     
-    # ==================== CATEGORY OPERATIONS ====================
+  ===== CATEGORY OPERATIONS ===
     
     def get_all_categories(self):
         """Get all categories"""
@@ -204,7 +204,7 @@ class Database:
             print(f"Error deleting category: {e}")
             return False
     
-    # ==================== TRANSACTION OPERATIONS ====================
+    # ===== TRANSACTION OPERATIONS ======
     
     def add_transaction(self, product_id, transaction_type, quantity, notes="", user="Admin"):
         """Add a stock transaction (in/out)"""
@@ -250,7 +250,7 @@ class Database:
             print(f"Error fetching transactions: {e}")
             return []
     
-    # ==================== DASHBOARD STATS ====================
+    # ====== DASHBOARD STATS =======
     
     def get_dashboard_stats(self):
         """Get dashboard statistics"""
