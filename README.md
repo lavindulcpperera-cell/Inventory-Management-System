@@ -3,7 +3,7 @@ This is my python project for Advanced Python Certification in SLIPD
 
 A desktop inventory management application built with **Python 3**, **Tkinter**, and **MySQL**. This system helps businesses track products, manage stock levels, record transactions, and generate insights about their inventory.
 
-## Project strucuture 
+## Project structure 
 
 
 ├── assets
@@ -40,7 +40,7 @@ A desktop inventory management application built with **Python 3**, **Tkinter**,
 
 ### 1. Clone the Repository
 
-git clone https://github.com//inventory-management-system.git
+git clone https://github.com/lavindulcpperera-cell/inventory-management-system.git
 cd inventory-management-system
 ``
 ### 2. Install Dependencies
